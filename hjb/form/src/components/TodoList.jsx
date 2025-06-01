@@ -1,41 +1,44 @@
-import {useState} from "react";
 import { Link } from "react-router-dom";
 import useLocalStorage from "../hooks/useLocalStorage";
+import { useInput } from "../hooks/useInput";
+import * as S from "./Style"
 
 export default function TodoList(){
     const [todos, setTodos] = useLocalStorage("todos", []);
-    const [input, setInput] = useState("");
+    const value = useInput("");
 
     const handleAdd = () => {
-        if(input.trim() === "") return;
+        if(value.input.trim() === "") return;
         const newTodo = {
             id: Date.now(),
-            title: input,
+            title: value.input,
         };
         setTodos([...todos, newTodo]);
-        setInput("");
+        value.reset();
     };
 
     return(
         <div>
+            <S.Box>
             <div>
-            <Link to={`/diary`}>다이어리 바로가기</Link>
+            <S.StyledLink to={`/diary`}>다이어리 바로가기</S.StyledLink>
             </div>
 
-            <input
+            <S.StyledInput
             type="text"
             placeholder="할 일을 입력하세요"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}/>
-            <button onClick={handleAdd}>추가</button>
+            value={value.input}
+            onChange={value.onChange}/>
+            <S.Button onClick={handleAdd}>추가</S.Button>
             
-            <ul>
+            <ol>
                 {todos.map((todo) => (
-                    <li key={todo.id}>
+                    <S.List key={todo.id}>
                         <Link to={`/todo/${todo.id}`}>{todo.title}</Link>
-                    </li>
+                    </S.List>
                 ))}
-            </ul>
+            </ol>
+            </S.Box>
         </div>
     );
 }
