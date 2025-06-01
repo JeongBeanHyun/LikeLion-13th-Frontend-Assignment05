@@ -2,34 +2,34 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const List = styled.li`
-    padding: 10px;
-    background-color: #a3ffa3;
-    margin: 20px auto;
+  padding: 10px;
+  background-color: #a3ffa3;
+  margin: 20px auto;
 
-    &:hover{
-        border: 1px solid darkblue;
-    }
+  &:hover {
+    border: 1px solid darkblue;
+  }
 `;
 
 export const Title = styled.h1`
-    color: black;
-    text-align: center;
+  color: black;
+  text-align: center;
 `;
 
 export const Title2 = styled.h2`
-    color: blueviolet;
-    text-shadow: 10px;
+  color: blueviolet;
+  text-shadow: 10px;
 `;
 
 export const Button = styled.button`
-    padding: 10px;
-    margin-left: 10px;
-    background-color: #9ed2ff;
+  padding: 10px;
+  margin-left: 10px;
+  background-color: #9ed2ff;
 `;
 
 export const Box = styled.div`
-    border: 1px solid dotted;
-    border-color: #48aaff;
+  border: 1px solid dotted;
+  border-color: #48aaff;
 `;
 
 export const StyledInput = styled.input`
