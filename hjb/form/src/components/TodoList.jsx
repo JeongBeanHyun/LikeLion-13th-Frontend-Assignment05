@@ -18,6 +18,10 @@ export default function TodoList(){
 
     return(
         <div>
+            <div>
+            <Link to={`/diary`}>다이어리 바로가기</Link>
+            </div>
+
             <input
             type="text"
             placeholder="할 일을 입력하세요"

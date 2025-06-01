@@ -1,6 +1,7 @@
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import TodoList from "./components/TodoList";
 import TodoDetail from "./components/TodoDetail";
+import Diary from "./components/Diary";
 
 export default function App(){
   return(
@@ -9,6 +10,7 @@ export default function App(){
       <Routes>
         <Route path="/" element={<TodoList/>}/>
         <Route path="/todo/:id" element={<TodoDetail />}/>
+        <Route path="/diary" element={<Diary />}/>
       </Routes>
     </Router>
   );
