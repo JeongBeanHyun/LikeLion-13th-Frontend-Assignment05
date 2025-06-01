@@ -2,20 +2,14 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const List = styled.li`
-  padding: 10px;
-  background-color: #a3ffa3;
-  margin: 20px auto;
-  border-radius: 8px;
-  width: 200px;                /* 원하는 너비 */
-  max-height: 100px;           /* 최대 높이 설정 */
-  overflow: auto;              /* 스크롤바 표시 */
-  word-wrap: break-word;       /* 긴 글자 줄바꿈 */
+    padding: 10px;
+    background-color: #a3ffa3;
+    margin: 20px auto;
 
-  &:hover {
-    border: 1px solid darkblue;
-  }
+    &:hover{
+        border: 1px solid darkblue;
+    }
 `;
-
 
 export const Title = styled.h1`
     color: black;
